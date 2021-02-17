@@ -14,9 +14,6 @@ ${EMAIL_TEXT_BOX}    //*[@id="ap_email"]
 ${CONTINUE_BUT}    //*[@id="continue"]
 ${PASSWORD_TEXT_BOX}    //*[@id="ap_password"]
 ${SUBMIT_BUT}    //*[@id="signInSubmit"]
-${RE_ENTER_PASSWORD_TEXT_BOX}    //*[@id="ap_password_check"]
-${CREATE_AMAZON_ACCOUNT_BUTTON}    //*[@id="continue"]
-${ENTER_OTP_TEXT_BOX}    //input[@name="code"]
 
 *** Test Cases ***
 Navigate and Login to the site using Chrome
@@ -33,23 +30,12 @@ Navigate and Login to the site using Firefox
     Fill in login Credentials and submit
     Close current browser
 
-Navigate and Login to the site using Safari
-    [Tags]    SMOKE
-    Navigate to the site using Safari
-    Go to login page
-    Fill in login Credentials and submit
-    Close current browser
-
-
 *** Keywords ***
 Navigate to the site using Chrome
     Open Browser    ${URL}    ${BROWSER_C}
 
 Navigate to the site using Firefox
-    Open Browser    ${URL}    ${BROWSER_F}}
-
-Navigate to the site using Safari
-    Open Browser    ${URL}    ${BROWSER_S}
+    Open Browser    ${URL}    ${BROWSER_F}
 
 Go to login page
     Mouse Over    ${HELLO_SIGN_IN_BUTTON}
@@ -62,21 +48,6 @@ Fill in login Credentials and submit
     Click Element    ${CONTINUE_BUT}
     Input Text       ${PASSWORD_TEXT_BOX}   XXXXXXXXXXX
     Click Element    ${SUBMIT_BUT}
-
-Fill in create account form
-    Click Element    ${YOUR_NAME_TEXT_BOX}
-    Clear Element Text    ${YOUR_NAME_TEXT_BOX}
-    Input Text    ${YOUR_NAME_TEXT_BOX}    XXXXXXX
-    Click Element    ${EMAIL_TEXT_BOX}
-    Clear Element Text    ${EMAIL_TEXT_BOX}
-    Input Text    ${EMAIL_TEXT_BOX}    XXXXXXXXX@gmail.com
-    Click Element    ${PASSWORD_TEXT_BOX}
-    Clear Element Text    ${PASSWORD_TEXT_BOX}
-    Input Password    ${PASSWORD_TEXT_BOX}    XXXXXXXX
-    Click Element    ${RE_ENTER_PASSWORD_TEXT_BOX}
-    Clear Element Text    ${RE_ENTER_PASSWORD_TEXT_BOX}
-    Input Password    ${RE_ENTER_PASSWORD_TEXT_BOX}    XXXXXXXX
-    Click Element    ${CREATE_AMAZON_ACCOUNT_BUTTON}
 
 
 Close current browser
