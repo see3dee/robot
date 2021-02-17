@@ -17,14 +17,14 @@ ${SUBMIT_BUT}    //*[@id="signInSubmit"]
 
 *** Test Cases ***
 Navigate and Login to the site using Chrome
-    [Tags]    SMOKE
+    [Tags]    Chrome
     Navigate to the site using Chrome
     Go to login page
     Fill in login Credentials and submit
     Close current browser
 
 Navigate and Login to the site using Firefox
-    [Tags]    SMOKE
+    [Tags]    Firefox
     Navigate to the site using Firefox
     Go to login page
     Fill in login Credentials and submit
