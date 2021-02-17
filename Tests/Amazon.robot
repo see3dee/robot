@@ -60,26 +60,24 @@ Go to login page
 Fill in login Credentials and submit
     Input Text    ${EMAIL_TEXT_BOX}    see3dee@gmail.com
     Click Element    ${CONTINUE_BUT}
-    Input Text       ${PASSWORD_TEXT_BOX}   0n1yR0ckandR011!
+    Input Text       ${PASSWORD_TEXT_BOX}   XXXXXXXXXXX
     Click Element    ${SUBMIT_BUT}
 
 Fill in create account form
     Click Element    ${YOUR_NAME_TEXT_BOX}
     Clear Element Text    ${YOUR_NAME_TEXT_BOX}
-    Input Text    ${YOUR_NAME_TEXT_BOX}    Donald
+    Input Text    ${YOUR_NAME_TEXT_BOX}    XXXXXXX
     Click Element    ${EMAIL_TEXT_BOX}
     Clear Element Text    ${EMAIL_TEXT_BOX}
-    Input Text    ${EMAIL_TEXT_BOX}    testingrobot@gmail.com
+    Input Text    ${EMAIL_TEXT_BOX}    XXXXXXXXX@gmail.com
     Click Element    ${PASSWORD_TEXT_BOX}
     Clear Element Text    ${PASSWORD_TEXT_BOX}
-    Input Password    ${PASSWORD_TEXT_BOX}    abcxyz@123
+    Input Password    ${PASSWORD_TEXT_BOX}    XXXXXXXX
     Click Element    ${RE_ENTER_PASSWORD_TEXT_BOX}
     Clear Element Text    ${RE_ENTER_PASSWORD_TEXT_BOX}
-    Input Password    ${RE_ENTER_PASSWORD_TEXT_BOX}    abcxyz@123
+    Input Password    ${RE_ENTER_PASSWORD_TEXT_BOX}    XXXXXXXX
     Click Element    ${CREATE_AMAZON_ACCOUNT_BUTTON}
 
-Verify navigated to otp page
-    Element Should Be Visible    ${ENTER_OTP_TEXT_BOX}
 
 Close current browser
     Close Browser
