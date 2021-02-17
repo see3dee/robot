@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.6 on darwin)" generated="20210217 14:02:30.400" rpa="false">
+<suite id="s1" name="Amazon" source="/Users/johnmunsey/src/robot/Tests/Amazon.robot">
+<test id="s1-t1" name="Navigate and Login to the site using Chrome">
+<kw name="Navigate to the site using Chrome">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_C}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:30.674" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20210217 14:02:30.673" endtime="20210217 14:02:34.596"></status>
+</kw>
+<status status="PASS" starttime="20210217 14:02:30.673" endtime="20210217 14:02:34.596"></status>
+</kw>
+<kw name="Go to login page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${HELLO_SIGN_IN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:34.598" level="INFO">Simulating Mouse Over on element '//*[@id="nav-link-accountList"]'.</msg>
+<status status="PASS" starttime="20210217 14:02:34.597" endtime="20210217 14:02:35.023"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${START_HERE_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20210217 14:02:35.023" endtime="20210217 14:02:35.051"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${START_HERE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:35.051" level="INFO">Clicking element '//*[@id="nav-flyout-ya-newCust"]/a'.</msg>
+<status status="PASS" starttime="20210217 14:02:35.051" endtime="20210217 14:02:35.579"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SECOND_SIGN_IN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:35.580" level="INFO">Clicking element '//*[@id="ap_register_form"]/div/div/div[6]/a'.</msg>
+<status status="PASS" starttime="20210217 14:02:35.579" endtime="20210217 14:02:35.911"></status>
+</kw>
+<status status="PASS" starttime="20210217 14:02:34.597" endtime="20210217 14:02:35.912"></status>
+</kw>
+<kw name="Fill in login Credentials and submit">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_TEXT_BOX}</arg>
+<arg>see3dee@gmail.com</arg>
+</arguments>
+<msg timestamp="20210217 14:02:35.913" level="INFO">Typing text 'see3dee@gmail.com' into text field '//*[@id="ap_email"]'.</msg>
+<status status="PASS" starttime="20210217 14:02:35.913" endtime="20210217 14:02:36.070"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CONTINUE_BUT}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:36.070" level="INFO">Clicking element '//*[@id="continue"]'.</msg>
+<status status="PASS" starttime="20210217 14:02:36.070" endtime="20210217 14:02:36.568"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_TEXT_BOX}</arg>
+<arg>0n1yR0ckandR011!</arg>
+</arguments>
+<msg timestamp="20210217 14:02:36.568" level="INFO">Typing text '0n1yR0ckandR011!' into text field '//*[@id="ap_password"]'.</msg>
+<status status="PASS" starttime="20210217 14:02:36.568" endtime="20210217 14:02:36.656"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SUBMIT_BUT}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:36.657" level="INFO">Clicking element '//*[@id="signInSubmit"]'.</msg>
+<status status="PASS" starttime="20210217 14:02:36.656" endtime="20210217 14:02:36.723"></status>
+</kw>
+<status status="PASS" starttime="20210217 14:02:35.912" endtime="20210217 14:02:36.723"></status>
+</kw>
+<kw name="Close current browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210217 14:02:36.724" endtime="20210217 14:02:36.844"></status>
+</kw>
+<status status="PASS" starttime="20210217 14:02:36.723" endtime="20210217 14:02:36.844"></status>
+</kw>
+<tags>
+<tag>SMOKE</tag>
+</tags>
+<status status="PASS" starttime="20210217 14:02:30.672" endtime="20210217 14:02:36.844" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Navigate and Login to the site using Firefox">
+<kw name="Navigate to the site using Firefox">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_F}}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:36.849" level="INFO">Opening browser 'Firefox}' to base url 'https://www.amazon.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210217 14:02:36.849" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210217 14:02:36.849" endtime="20210217 14:02:36.850"></status>
+</kw>
+<msg timestamp="20210217 14:02:36.854" level="FAIL">ValueError: firefox} is not a supported browser.</msg>
+<status status="FAIL" starttime="20210217 14:02:36.848" endtime="20210217 14:02:36.854"></status>
+</kw>
+<status status="FAIL" starttime="20210217 14:02:36.847" endtime="20210217 14:02:36.855"></status>
+</kw>
+<tags>
+<tag>SMOKE</tag>
+</tags>
+<status status="FAIL" starttime="20210217 14:02:36.846" endtime="20210217 14:02:36.855" critical="yes">ValueError: firefox} is not a supported browser.</status>
+</test>
+<test id="s1-t3" name="Navigate and Login to the site using Safari">
+<kw name="Navigate to the site using Safari">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER_S}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:36.858" level="INFO">Opening browser 'Safari' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20210217 14:02:36.858" endtime="20210217 14:02:59.875"></status>
+</kw>
+<status status="PASS" starttime="20210217 14:02:36.857" endtime="20210217 14:02:59.876"></status>
+</kw>
+<kw name="Go to login page">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${HELLO_SIGN_IN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210217 14:02:59.878" level="INFO">Simulating Mouse Over on element '//*[@id="nav-link-accountList"]'.</msg>
+<status status="PASS" starttime="20210217 14:02:59.877" endtime="20210217 14:03:00.159"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${START_HERE_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20210217 14:03:00.159" endtime="20210217 14:03:00.195"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${START_HERE_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210217 14:03:00.196" level="INFO">Clicking element '//*[@id="nav-flyout-ya-newCust"]/a'.</msg>
+<status status="PASS" starttime="20210217 14:03:00.195" endtime="20210217 14:03:00.391"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${SECOND_SIGN_IN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20210217 14:03:00.391" level="INFO">Clicking element '//*[@id="ap_register_form"]/div/div/div[6]/a'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210217 14:03:00.572" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-39.png"&gt;&lt;img src="selenium-screenshot-39.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210217 14:03:00.410" endtime="20210217 14:03:00.572"></status>
+</kw>
+<msg timestamp="20210217 14:03:00.576" level="FAIL">Element with locator '//*[@id="ap_register_form"]/div/div/div[6]/a' not found.</msg>
+<status status="FAIL" starttime="20210217 14:03:00.391" endtime="20210217 14:03:00.576"></status>
+</kw>
+<status status="FAIL" starttime="20210217 14:02:59.877" endtime="20210217 14:03:00.576"></status>
+</kw>
+<tags>
+<tag>SMOKE</tag>
+</tags>
+<status status="FAIL" starttime="20210217 14:02:36.856" endtime="20210217 14:03:00.576" critical="yes">Element with locator '//*[@id="ap_register_form"]/div/div/div[6]/a' not found.</status>
+</test>
+<status status="FAIL" starttime="20210217 14:02:30.402" endtime="20210217 14:03:00.577"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2">Critical Tests</stat>
+<stat pass="1" fail="2">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="2">SMOKE</stat>
+</tag>
+<suite>
+<stat pass="1" fail="2" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
